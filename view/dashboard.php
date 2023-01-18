@@ -1,5 +1,41 @@
 <?php
-    include('../include/head.php');
-    include('../include/sidebar.php');
-    include('../include/footer.php');
+    include('../includes/head.php');
+    include('../includes/sidebar.php');
+    include('../includes/footer.php');
 ?>
+<body style="min-height: 100vh; background: url(../asset/image/6166898.jpg) no-repeat fixed; background-size: 70vh; background-position: right bottom;">
+ 
+    <div class="home_content">
+        <div class="row d-block px-4 ti">
+           
+
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand text text-primary">News Technologies</a>
+                    <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+
+
+        </div>
+        <div class="text-primary row">
+            <div class="d-flex justify-content-between m-6 col-md-6 col-sm-12 col-lg-6" style=" padding: 60px 54px;width: 26rem;border-radius: 5px;background: #f39fec;">
+                <div>
+                    <h4 class="ms-3">Articles</h4>
+                    <a href="viewbooks.php">see more</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between m-6 text-white col-md-6 col-lg-6 col-sm-12" style=" padding: 60px 54px;width: 26rem;border-radius: 5px;background: #b796ed;">
+                <div>
+                    <h4 class="ms-3 ">Users</h4>
+                    <a href="viewbooks.php">see more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       
+    </body>

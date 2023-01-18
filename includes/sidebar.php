@@ -1,5 +1,4 @@
 <?php 
-    // include "include/autoload.php";
     include ("../classes/Database.php");
 $con = (new Database())->connect();
 
@@ -62,7 +61,6 @@ $con = (new Database())->connect();
         <div class="profile_content">
             <div class="profile">
                 <div class="profile_details">
-                    <!-- <img src="" alt=""> -->
                     <div class="name_job">
                     <div class="name">  </div>
                     <div class="job">Admin</div>
@@ -74,22 +72,7 @@ $con = (new Database())->connect();
         </div>
     </div>
 
-    <div class="home_content">
-        <div class="row d-block px-4 ti">
-            <div class="text ">News Technologies</div>
-            <label for="exampleDataList" class="form-label">Datalist example</label>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-    <datalist id="datalistOptions">
-        <option value="San Francisco">
-        <option value="New York">
-        <option value="Seattle">
-        <option value="Los Angeles">
-        <option value="Chicago">
-    </datalist>
-    <div>
-        articles
-        <!-- <img src="../asset/img/6166898.jpg" style ="width:324px; height:218px;"alt=""> -->
-    </div>
+   
 
     <script>
 
