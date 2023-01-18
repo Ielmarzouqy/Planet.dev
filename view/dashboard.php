@@ -2,6 +2,8 @@
     include('../includes/head.php');
     include('../includes/sidebar.php');
     include('../includes/footer.php');
+    // include('../classes/Database.php');
+
 ?>
 <body style="min-height: 100vh; background: url(../asset/image/6166898.jpg) no-repeat fixed; background-size: 70vh; background-position: right bottom;">
  

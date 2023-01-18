@@ -1,6 +1,6 @@
 <?php 
-    include ("../classes/Database.php");
-$con = (new Database())->connect();
+//     include ("../classes/Database.php");
+// $con = (new Database())->connect();
 
 
 ?>

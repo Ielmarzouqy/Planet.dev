@@ -1,7 +1,13 @@
+<?php
+ require_once '../controllers/adminContr.php';
+ $Admin = new Admin_controller();
+ $Admin->signUp();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CODE WITH HOSSEIN</title>
+    <title>sign up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,10 +20,10 @@
 
         <h1 class="text-center">Create Account!</h1>
         
-        <form class="needs-validation">
+        <form class="needs-validation" method="post">
         <div class="form-group was-validated">
                 <label class="form-label" for="firstName">First Name</label>
-                <input class="form-control" type="firstName" id="FirstName" required>
+                <input class="form-control" type="firstName" name="firstName" id="FirstName" required>
                 <div class="invalid-feedback">
                     Please enter your First Name
                 </div>
@@ -25,7 +31,7 @@
 
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Last Name</label>
-                <input class="form-control" type="lastName" id="lastName" required>
+                <input class="form-control" type="lastName" name="lastName" id="lastName" required>
                 <div class="invalid-feedback">
                     Please enter your last name
                 </div>
@@ -33,26 +39,20 @@
 
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
-                <input class="form-control" type="email" id="email" required>
+                <input class="form-control" type="email" name="email" id="email" required>
                 <div class="invalid-feedback">
                     Please enter your email address
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-control" type="password" id="password" required>
+                <input class="form-control" type="password"  name="password" id="password" required>
                 <div class="invalid-feedback">
                     Please enter your password
                 </div>
             </div>
-        
-            <input class="btn rounded-pill w-100" type="submit" value="SIGN UP">
+            <input class="btn rounded-pill w-100" type="submit" name="SignSubmit" value="SIGN UP">
         </form>
-
     </div>
-
-    
-
 </body>
-
 </html>
