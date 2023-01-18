@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./asset/main.css">
+    <link rel="stylesheet" href="../asset/main.css">
 </head>
 
 <body class="gap-4 row">
 
     <div class="login ">
 
-        <h1 class="text-center">Hello Again!</h1>
+        <h1 class="text-center">Create Account!</h1>
         
         <form class="needs-validation">
+        <div class="form-group was-validated">
+                <label class="form-label" for="firstName">First Name</label>
+                <input class="form-control" type="firstName" id="FirstName" required>
+                <div class="invalid-feedback">
+                    Please enter your First Name
+                </div>
+            </div>
+
+            <div class="form-group was-validated">
+                <label class="form-label" for="email">Last Name</label>
+                <input class="form-control" type="lastName" id="lastName" required>
+                <div class="invalid-feedback">
+                    Please enter your last name
+                </div>
+            </div>
+
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
                 <input class="form-control" type="email" id="email" required>
@@ -29,11 +45,8 @@
                     Please enter your password
                 </div>
             </div>
-            <div class="form-group form-check">
-                <input class="form-check-input" type="checkbox" id="check">
-                <label class="form-check-label" for="check">Remember me</label>
-            </div>
-            <input class="btn btn-success w-100" type="submit" value="SIGN IN">
+        
+            <input class="btn rounded-pill w-100" type="submit" value="SIGN UP">
         </form>
 
     </div>
