@@ -1,4 +1,5 @@
-function message(){
+function message(e){
+    e.preventDefault();
     console.log("message");
 var category = document.getElementById('category');
 const success = document.getElementById('success');
@@ -8,12 +9,12 @@ if(category.value === '' ){
 danger.style.display = 'block';
 }
 else{
-setTimeout(() => {
-    category.value = '';
+    success.style.display = 'block';
+    setTimeout(() => {
+        category.value = '';
 
-}, 2000);
+    }, 2000);
 
-success.style.display = 'block';
 }
 
 

@@ -10,7 +10,7 @@ include('footer.php');
         <div class="logo_content">
             <div class="logo">
                 <a href="../index.php" class="text-success">
-                    <span><img src="../asset/img/Logo.png"style="width:30px; height:30px" alt="" height="10"></span>
+                    <span><img src="../asset/image/Logo.png"style="width:30px; height:30px" alt="" height="10"></span>
                 </a>
                 <div class="logo_name">Planet.Dev </div>
             </div>
@@ -26,11 +26,18 @@ include('footer.php');
                     <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="../view/viewPosts.php">
+                <a href="../view/allPosts.php">
                     <i class='bx bx-book-open '></i>  
                     <span class="links_name">All Posts</span>
                 </a>
                     <span class="tooltip">All Posts</span>
+            </li>
+            <li>
+                <a href="../view/addPost.php">
+                    <i class='bx bx-book-open '></i>  
+                    <span class="links_name">Add Posts</span>
+                </a>
+                    <span class="tooltip">Add Posts</span>
             </li>
             <li>
                 <a href="../view/addCategory.php">
