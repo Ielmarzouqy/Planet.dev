@@ -8,8 +8,6 @@
     public $lastName;
     public $email;
     public $password;
-    // public $pfp;
-    // public $pfpName;
     public $id;
 
     // __setters___//
@@ -42,17 +40,17 @@
     // __functions__//
 
     function signup(){
-      $que = "INSERT INTO admin VALUES(null,?,?,?,?,?) ";
+      $que = "INSERT INTO admin VALUES(null,?,?,?,?) ";
       $stmt= $this->connect()->prepare($que);
-      $stmt->execute([$this->firstName,$this->lastName,$this->email,$this->password]);
-    //   move_uploaded_file($this->pfpName, '../assets/users pfp/' . $this->pfp);
+      $res=$stmt->execute(array($this->firstName,$this->lastName,$this->email,$this->password));
+      return $res;
     }
 
     function login(){
-      $que = "SELECT * FROM admin where email=? && password=?";
+      $que = "SELECT * FROM admin where email=? AND password=?";
       $stmt= $this->connect()->prepare($que);
       $stmt->execute([$this->email,$this->password]);
-      return $stmt->fetch();
+      return $stmt->fetchAll();
     }
 
     function getUser(){

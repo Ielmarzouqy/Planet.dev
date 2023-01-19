@@ -1,7 +1,8 @@
 <?php
  require_once '../controllers/adminContr.php';
  $Admin = new Admin_controller();
- $Admin->signUp();
+ $Admin->sign();
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +21,7 @@
 
         <h1 class="text-center">Create Account!</h1>
         
-        <form class="needs-validation" method="post">
+        <form class="needs-validation" method="POST">
         <div class="form-group was-validated">
                 <label class="form-label" for="firstName">First Name</label>
                 <input class="form-control" type="firstName" name="firstName" id="FirstName" required>

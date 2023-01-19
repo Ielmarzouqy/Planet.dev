@@ -1,7 +1,7 @@
 <?php
  require_once '../controllers/adminContr.php';
  $Admin = new Admin_controller();
- $Admin->logIn();
+ $Admin->log();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
 
         <h1 class="text-center">Hello Again!</h1>
         
-        <form class="needs-validation" action="../controllers/adminContr.php" method="post">
+        <form class="needs-validation" action="" method="post">
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
                 <input class="form-control" type="email" name="logemail" id="email" required>

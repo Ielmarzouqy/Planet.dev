@@ -7,11 +7,11 @@ class Database{
     private $pwd = "";
 
     public function connect(){
-        $dsn = 'mysql:localHost='.$this->localHost.';dbName='.$this->dbName;
+        $dsn = 'mysql:host='.$this->localHost.';dbname='.$this->dbName;
         try{
             $pdo = new PDO($dsn, $this->user, $this->pwd);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-            echo "connection seccess";
+            // echo "connection seccess";
             return $pdo;
         }catch(Exception $e){
             echo "404";
