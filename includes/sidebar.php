@@ -1,20 +1,10 @@
 <?php 
-//     include ("../classes/Database.php");
-// $con = (new Database())->connect();
-
-
+include('head.php');
+include('footer.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../asset/style.css">
-    <title>planet dev</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
-</head>
+<link rel="stylesheet" href="../asset/style.css">
+
 <body>
 <div class="sidebar ">
         <div class="logo_content">
@@ -29,25 +19,25 @@
         <ul class="nav_list">
            
             <li>
-                <a href="#">
+                <a href="../view/dashboard.php">
                     <i class='bx bx-grid-alt'></i>  
                     <span class="links_name">Dashboard</span>
                 </a>
                     <span class="tooltip">Dashboard</span>
             </li>
             <li>
-                <a href="../view/viewPost.php">
+                <a href="../view/viewPosts.php">
                     <i class='bx bx-book-open '></i>  
                     <span class="links_name">All Posts</span>
                 </a>
                     <span class="tooltip">All Posts</span>
             </li>
             <li>
-                <a href="../view/addPost.php">
+                <a href="../view/addCategory.php">
                     <i class='bx bx-book-open '></i>  
-                    <span class="links_name">Add Post</span>
+                    <span class="links_name">Add Category</span>
                 </a>
-                    <span class="tooltip">Add Post</span>
+                    <span class="tooltip">Add Category</span>
             </li>
            
             <li>

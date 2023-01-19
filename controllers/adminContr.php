@@ -9,7 +9,14 @@
         $this->setlastName($_POST["lastName"]);
         $this->setemail($_POST["email"]);
         $this->setpassword($_POST["password"]);
-        $res = $this->signup();        
+        $res = $this->signup(); 
+        if($res){
+            echo `
+            <script>
+          alert("success");
+            </script>
+            `;
+        }       
     }
   }
 
@@ -20,20 +27,17 @@
        $result=$this->login();
        if($result){
           $_SESSION['Admin']=$result['id'];
-          echo "view dashboard";
           header("Location: ../view/dashboard.php");
        }else{
           $_SESSION['loginError']="incorrect inputs";
-         echo "error dashbord";
        }
     }
   }
 
-  function displayUser(){
+  function showUser(){
        $this->setId($_SESSION['Admin']);
        return $this->getUser();
   }
-
  }
 
 
