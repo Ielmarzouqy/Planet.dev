@@ -34,7 +34,6 @@
                     Please enter your password
                 </div>
             </div>
-            
             <span> if you are have not account<a href="../view/signup.php">signup</a></span>
             <input class="btn  rounded-pill w-100" type="submit" name="logSubmit" value="SIGN IN">
         </form>

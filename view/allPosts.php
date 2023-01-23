@@ -1,6 +1,12 @@
 <?php
 include('../includes/sidebar.php');
+// include_once('../classes/Post.php');
+include_once('../controllers/postContr.php');
 
+$post = new Post_controller;
+$posts = $post->getAllPosts();
+
+$post->deletePost();
 ?>
 <body style="background-color: #c0b0fa;">
 <div class="home_content " >
@@ -11,99 +17,29 @@ include('../includes/sidebar.php');
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						 <div class="container">
+							<form action="" method="POST">
 						 	<div class="row">
+							 <?php foreach($posts as $post)  :?>
 						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;margin: auto;">
-						 				<img src="../asset/image/post1.jpg"  style="width: 300px;height:300px;"class="card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class="btn btn-outline-info">Read More</button>
-						 					
-						 				</div>
-						 				
-						 			</div>
-						 			
-						 		</div>
-						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;">
-						 				<img src="../asset/image/post2.jpg"  style="width: 300px;height:300px;" class="bg-primary card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class="btn btn-outline-info">Read More</button>
-						 					
-						 				</div>
-						 				
-						 			</div>
-						 			
-						 		</div>
-						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;">
-						 				<img src="../asset/image/post4.png" style="width: 300px;height:300px;" class="card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class=" btn btn-outline-info">Read More</button>
-						 					
-						 				</div>
-						 				
-						 			</div>
-						 			
-						 		</div>
-						 		
-						 	</div>
-						 	
-						 </div>
+						 			<div class="card" >
+						 				<!-- <img src="../asset/image/post1.jpg"  style="width: 300px;height:300px;"class="card-img-top"> -->
+										<div class="card-body">
+						 					<h4 class="card-title"><?= $post['title']?></h4>
+						 					<p class="card-text"><?= $post['description']?></p>
+						 					<p class="card-text"><?= $post['name']?></p>
+						 					<p class="card-text"><?= $post['content']?></p>
+						 					<button type="button" class="btn btn-outline-info">update</button>
+						 					<button   value=<?= $post['id']; ?> type="submit" name ="deletebtn" class="btn btn-outline-danger">delete</button>
 
-						
-					</div>
-					<div class="carousel-item">
-						 <div class="container">
-						 	<div class="row">
-						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;margin: auto;">
-						 				<img src="../asset/image/post3.jpg"  style="width: 300px;height:300px;" class="card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class="btn btn-outline-info">Read More</button>
 						 				</div>
 						 			</div>
-						 			
 						 		</div>
-						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;">
-						 				<img src="../asset/image/post5.jpg"  style="width: 300px;height:300px;" class="card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class="btn btn-outline-info">Read More</button>
-						 				</div>
-						 			</div>
-						 			
+								 <?php endforeach;?>
 						 		</div>
-						 		<div class="col-sm-12 col-lg-4">
-						 			<div class="card" style="width: 300px;">
-						 				<img src="../asset/image/post6.png" style="width: 300px; height:300px;" class=" bg-danger card-img-top">
-						 				<div class="card-body">
-						 					<h4 class="card-title">Why you should use skin masks ?</h4>
-						 					<p class="card-text">Skin masks help us to make are skin fresh and also they protect our skin from the harm rays of sun</p>
-						 					<button type="button" class="btn btn-outline-info">Read More</button>
-						 					
-						 				</div>
-						 				
-						 			</div>
-						 			
-						 		</div>
-						 		
+								 </form>
 						 	</div>
-						 	
 						 </div>
-
-						
 					</div>
-					
 				</div>
 				<a href="#inam" class="carousel-control-prev" data-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
