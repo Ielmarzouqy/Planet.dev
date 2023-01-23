@@ -1,5 +1,15 @@
+let addBtn = document.getElementById('second');
+
+addBtn.addEventListener("click",event=>{
+    secondForm();
+})
+   
+function secondForm(){
+ 
+}
+
 function message(e){
-    e.preventDefault();
+    // e.preventDefault();
     console.log("message");
 var category = document.getElementById('category');
 const success = document.getElementById('success');

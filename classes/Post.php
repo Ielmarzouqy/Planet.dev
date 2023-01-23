@@ -9,6 +9,9 @@ class Post extends Database{
     
     public $content;
     public $category;
+
+    public $image;
+    public $imageName;
    
     public function setCategory($category){
         $this->category = $category;;
@@ -30,9 +33,10 @@ class Post extends Database{
         $this->content = $content;
     }
     public function addPost(){
-        $quer = "INSERT INTO posts VALUE (null, ?, ?, ?,?)";
+        $quer = "INSERT INTO posts VALUE (null, ?, ?, ?,?,?)";
         $stmt = $this->connect()->prepare($quer);
-        $result = $stmt->execute(array($this->title, $this->description,$this->category, $this->content));
+        $result = $stmt->execute(array($this->title, $this->description,$this->category, $this->content, $this->imageName));
+        move_uploaded_file($this->image, '../asset/image/' . $this->imageName);
         return $result;
     }
 
@@ -42,9 +46,16 @@ class Post extends Database{
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
     public function deletePosts($id){
-        $delete = "DELETE * FROM posts WHERE id =?";
+        $delete = "DELETE FROM posts WHERE id=$id";
         $stmt = $this->connect()->prepare($delete);
-        $stmt->execute([$id]);
+        $stmt->execute();
+    }
+    public function edit($id){
+        $update = "UPDATE `posts` SET `id`='?',`title`='?',`description`='?',`category_id`='?',`content`='?',`image`='?' WHERE id = $id";
+        $stmt = $this->connect()->prepare($update);
+        $stmt->execute();
+
     }
 }

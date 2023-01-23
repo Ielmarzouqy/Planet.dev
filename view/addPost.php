@@ -12,13 +12,17 @@ $categories = $category->getAllCategory();
 
 
 <div class="home_content ms-5">
-    <form action="" method="POST">
+    <form action="" method="POST" enctype="multipart/form-data">
             <div class=" row gap-5 p-4 contailkner">
                 <div class="col-lg-6 col-sm-12 d-grid gap-3 justify-content-center box">
                     <h3 class="text-center" >Add Post</h3>
                     <div class="name">
                         <i class="fas fa-user"></i>
                         <input type="text" placeholder="Title" name="title" id="title">
+                    </div>
+                    <div class="name">
+                        <i class="fas fa-user"></i>
+                        <input type="file" placeholder="image" name="image" id="image">
                     </div>
                     <div class="name">
                         <i class="fas fa-user"></i>

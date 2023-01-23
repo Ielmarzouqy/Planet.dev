@@ -14,7 +14,7 @@ class Categories extends Database{
     //     $this->category=$category;
     // }
    public function addCategory(){
-        $query= "INSERT INTO category values (null,?)";
+        $query= "INSERT INTO category value (null,?)";
         $stmt = $this->connect()->prepare($query);
         var_dump($this);
         die;

@@ -4,9 +4,9 @@ include('../includes/sidebar.php');
 include_once('../controllers/postContr.php');
 
 $post = new Post_controller;
+$post->deletePost();
 $posts = $post->getAllPosts();
 
-$post->deletePost();
 ?>
 <body style="background-color: #c0b0fa;">
 <div class="home_content " >
@@ -18,17 +18,18 @@ $post->deletePost();
 					<div class="carousel-item active">
 						 <div class="container">
 							<form action="" method="POST">
-						 	<div class="row">
+						 	<div class="row p-2">
 							 <?php foreach($posts as $post)  :?>
-						 		<div class="col-sm-12 col-lg-4">
+						 		<div class="col-sm-12 col-lg-4 gap-2">
 						 			<div class="card" >
-						 				<!-- <img src="../asset/image/post1.jpg"  style="width: 300px;height:300px;"class="card-img-top"> -->
+						 				<img src="../asset/image/<?= $post['image']?>"  class="card-img-top">
 										<div class="card-body">
-						 					<h4 class="card-title"><?= $post['title']?></h4>
+						 					<h4 class=" text-center card-title"><?= $post['title']?></h4>
 						 					<p class="card-text"><?= $post['description']?></p>
-						 					<p class="card-text"><?= $post['name']?></p>
+						 					<p class="card-text text-info"><?= $post['name']?></p>
 						 					<p class="card-text"><?= $post['content']?></p>
-						 					<button type="button" class="btn btn-outline-info">update</button>
+											 <a href="editPost.php?post_edit_id=<?=$post['id'];?>" class="btn btn-outline-info">Edit</a>
+						 					<!-- <button type="button" class="btn btn-outline-info">update</button> -->
 						 					<button   value=<?= $post['id']; ?> type="submit" name ="deletebtn" class="btn btn-outline-danger">delete</button>
 
 						 				</div>

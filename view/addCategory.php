@@ -1,6 +1,7 @@
 <?php
 include('../includes/sidebar.php');
-// echo"add hh";
+// include_once('../classes/Categories.php');
+
 include_once('../controllers/categoryContr.php');
 $Category = new Category_contr();
  $Category->add_category();
