@@ -6,13 +6,10 @@ include('../classes/Categories.php');
 class Category_contr extends Categories{
 
     public function add_category(){
-
         if (isset($_POST["catSubmit"])){
-			echo "hhhh";die;
             $this->setCategory($_POST["category"]);
              $this->addCategory(); 
-          
+             header('Location: addCategory.php' );
         }
     }
-
 }

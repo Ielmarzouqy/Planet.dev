@@ -14,30 +14,27 @@
 </head>
 
 <body class="gap-4 row">
-
     <div class="login ">
-
         <h1 class="text-center">Hello Again!</h1>
-        
         <form class="needs-validation" action="" method="post">
             <div class="form-group was-validated">
                 <label class="form-label" for="email">Email address</label>
-                <input class="form-control" type="email" name="logemail" id="email" required>
-                <div class="invalid-feedback">
+                <input class="form-control" type="email" name="logemail" id="input" required>
+                <div class="invalid-feedback" id="error">
                     Please enter your email address
                 </div>
             </div>
             <div class="form-group was-validated">
                 <label class="form-label" for="password">Password</label>
-                <input class="form-control rounded-bottom-1" type="password" name="logpassword" id="password" required>
-                <div class="invalid-feedback">
+                <input class="form-control rounded-bottom-1" type="password" name="logpassword" id="input" required>
+                <div class="invalid-feedback" id="error">
                     Please enter your password
                 </div>
             </div>
-            <span> if you are have not account<a href="../view/signup.php">signup</a></span>
+            <span> if you are have not account<a href="../view/signup.php">  signup</a></span>
             <input class="btn  rounded-pill w-100" type="submit" name="logSubmit" value="SIGN IN">
         </form>
-
     </div>
+         <script src="../asset/javascript/main.js"></script>
 </body>
 </html>

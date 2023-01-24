@@ -8,8 +8,6 @@ $Category = new Category_contr();
 
 ?>
     <link rel="stylesheet" href="../asset/message.css">
-
-
 <div class="home_content">
     <form action="" method="POST">
             <div class=" container">

@@ -36,7 +36,7 @@
 
   function showUser(){
        $this->setId($_SESSION['Admin']);
-       return $this->getUser();
+       return $this->getAdmin();
   }
  }
 

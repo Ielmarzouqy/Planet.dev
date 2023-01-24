@@ -9,7 +9,6 @@
     public $email;
     public $password;
     public $id;
-
     // __setters___//
 
     public function setfirstName($firstName)
@@ -53,7 +52,7 @@
       return $stmt->fetchAll();
     }
 
-    function getUser(){
+    function getAdmin(){
         $que = "SELECT * FROM admin where id=?";
         $stmt= $this->connect()->prepare($que);
         $stmt->execute([$this->id]);

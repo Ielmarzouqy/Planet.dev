@@ -40,7 +40,7 @@ class Post extends Database{
         return $result;
     }
 
-    public function getAllPosts(){
+     public function getAllPosts(){
         $select = "SELECT * FROM posts  inner join category on category_id = id_category";
         $stmt = $this->connect()->query($select);
 
@@ -53,9 +53,30 @@ class Post extends Database{
         $stmt->execute();
     }
     public function edit($id){
-        $update = "UPDATE `posts` SET `id`='?',`title`='?',`description`='?',`category_id`='?',`content`='?',`image`='?' WHERE id = $id";
-        $stmt = $this->connect()->prepare($update);
-        $stmt->execute();
 
+        $edit = "SELECT * FROM posts p INNER JOIN category c ON p.category_id = c.id_category WHERE p.id=$id";
+        $result = $this->connect()->prepare($edit);
+        $res = $result->execute();
+        $data = $result->fetch(PDO::FETCH_ASSOC);
+        if($res){
+            return $data;
+        }else{
+            return false;
+        }
+    }
+
+    public function update(){
+        $update = "UPDATE posts SET title=?,description=?,category_id=?,content=? ,image=? WHERE id =?";
+        $result = $this->connect()->prepare($update);
+        $res = $result->execute(array($this->title, $this->description, $this->category, $this->content, $this->imageName, $_GET['post_edit_id']));
+        move_uploaded_file($this->image, '../asset/image/' . $this->imageName);
+
+        return $res;
+    }
+
+    public function searchPost($search){
+        return $this->connect()
+            ->query("SELECT * FROM posts p INNER JOIN category c ON p.category_id = c.id_category WHERE title LIKE '%$search%'")
+                ->fetchAll(PDO::FETCH_ASSOC);
     }
 }
