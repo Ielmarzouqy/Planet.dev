@@ -79,4 +79,10 @@ include('Categories.php');
             ->query("SELECT * FROM posts p INNER JOIN category c ON p.category_id = c.id_category WHERE title LIKE '%$search%'")
                 ->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function statistics($table){
+        return $this->connect()
+        ->query("SELECT count(*) as statistics FROM $table")
+            ->fetch();
+    }
 }

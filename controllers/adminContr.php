@@ -1,6 +1,7 @@
 <?php
  require_once '../classes/admin.php';
- session_start();
+ if(!session_id())
+    session_start();
  class Admin_controller extends Admin{
 
   function sign(){

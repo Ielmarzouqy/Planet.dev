@@ -1,6 +1,7 @@
 <?php
     include('../includes/sidebar.php');
-include_once('../classes/Post.php');
+    include_once('../classes/Post.php');
+
 
 $post = new Post();
 $post->getAllPosts();
@@ -26,7 +27,7 @@ $post->getAllPosts();
             <div class="d-flex justify-content-between m-6 text-white col-md-6 col-lg-6 col-sm-12" style=" padding: 60px 54px;width: 26rem;border-radius: 5px;background: #b796ed;">
                 <div>
                     <h4 class="ms-3 ">Users</h4>
-                    <a href="">8</a>
+                    <a href=""><?=$post->statistics('admin')['statistics']?></a>
                 </div>
             </div>
         </div>

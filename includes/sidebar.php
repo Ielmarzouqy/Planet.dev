@@ -1,6 +1,7 @@
 <?php 
 include('head.php');
 include('footer.php');
+require('auth.php');
 ?>
 
 <link rel="stylesheet" href="../asset/style.css">
@@ -63,7 +64,7 @@ include('footer.php');
                     <div class="job">Admin</div>
                     </div>
                 </div>
-				<a href="#">  <i class='bx bx-log-out'id="log_out"></i></a>
+				<a href="../view/logout.php"> <i class='bx bx-log-out'id="log_out"></i></a>
               
             </div>
         </div>

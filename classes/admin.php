@@ -44,7 +44,7 @@
       $que = "SELECT * FROM admin where email=? AND password=?";
       $stmt= $this->connect()->prepare($que);
       $stmt->execute([$this->email,$this->password]);
-      return $stmt->fetchAll();
+      return $stmt->fetch();
     }
     function getAdmin(){
         $que = "SELECT * FROM admin where id=?";
