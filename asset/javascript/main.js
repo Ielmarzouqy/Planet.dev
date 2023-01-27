@@ -37,3 +37,37 @@ danger.style.display = 'none';
 success.style.display = 'none';
 
 }
+//  function addforme(){
+
+//     // preventDefault();
+//     divForm.innerHTML+= ` <div class="name">
+//     <i class="fas fa-user"></i>
+//     <input type="text" placeholder="Title" name="title" id="title[]">
+//     </div>
+//     <div class="name">
+//     <i class="fas fa-user"></i>
+//     <input type="file" placeholder="image" name="image" id="image">
+//     </div>
+//     <div class="name">
+//     <i class="fas fa-user"></i>
+//     <input type="text" placeholder="Description" name="description" id="description">
+//     </div>
+//     <div class="name "  >
+//     <select name="category" id="category" class=" p-4 form-select form-select-lg rounded-pill mb-3" aria-label=".form-select-lg example">
+//         <option selected>Choose a category</option>
+//         <?php foreach($categories as $category)  :?>      
+//         <option value=<?= $category['id_category']?>><?=$category['name'] ?></option>
+//         <?php endforeach;?>
+//     </select>
+//     </div>
+    
+//     <div class="name border-radius ">
+//     <i class="fas fa-user"></i>
+//     <textarea class="form-control p-4" placeholder="Content" name="content" id="content"></textarea>
+//     </div>` ;
+
+// }
+
+function addForm(){
+    divForm.classList.remove('d-none');
+}
